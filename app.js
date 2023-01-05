@@ -24,8 +24,8 @@ app.post("/", function(req,res){
             res.write("<h3>statuscode : "+ response.statusCode+"</h3>");
             res.write("<h3>statusMessage : "+ response.statusMessage +"</h3>")
         }else{
-            res.write("<h3>statuscode : "+ response.statusCode+"</h3>");
-            res.write("<h3>statusMessage : "+ response.statusMessage +"</h3>")
+            console.log(code);
+            res.send("<h3>statuscode : " + code +" and statusMessage : " + response.statusMessage +"</h3>");
         }
 
     }).on("error", (e) => {
